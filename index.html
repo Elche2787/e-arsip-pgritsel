@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arsip Surat PGRI Teweh Selatan</title>
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#10264a;--navy2:#1b3a6b;--red:#c62839;--red2:#e24a58;--cream:#f6f3ee;--ink:#1d2433;--mut:#6b7488;--line:#e4e0d8;--ok:#2f9e6e;--r:20px}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--navy);-webkit-font-smoothing:antialiased}
+.hide{display:none!important}
+/* background aurora */
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:linear-gradient(135deg,#0b1d3a,#16355f 55%,#1b2f55)}
+.bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 18s ease-in-out infinite}
+.bg i:nth-child(1){width:46vmax;height:46vmax;background:#c62839;left:-12vmax;top:-14vmax}
+.bg i:nth-child(2){width:40vmax;height:40vmax;background:#2c6fb0;right:-10vmax;bottom:-12vmax;animation-delay:-6s}
+.bg i:nth-child(3){width:28vmax;height:28vmax;background:#e8b86a;opacity:.28;left:40%;top:30%;animation-delay:-11s}
+.bg:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(circle at 50% 40%,#000,transparent 75%)}
+@keyframes float{50%{transform:translate(4vmax,3vmax) scale(1.08)}}
+/* login */
+#login{min-height:100%;display:grid;place-items:center;padding:24px}
+.glass{background:rgba(255,255,255,.16);backdrop-filter:blur(28px) saturate(180%);-webkit-backdrop-filter:blur(28px) saturate(180%);border:1px solid rgba(255,255,255,.38);box-shadow:0 24px 60px rgba(4,12,30,.4),inset 0 1px 0 rgba(255,255,255,.5);border-radius:28px}
+.lc{width:100%;max-width:400px;padding:36px 30px;color:#fff;text-align:center;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.lc img,.logo-fb{width:84px;height:84px;object-fit:contain;filter:drop-shadow(0 8px 16px rgba(0,0,0,.35))}
+.lc h1{font-size:21px;font-weight:800;margin:14px 0 4px}
+.lc p{font-size:13px;opacity:.8;margin-bottom:26px}
+.fld{position:relative;margin-bottom:14px;text-align:left}
+.fld input{width:100%;padding:15px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.14);color:#fff;font:inherit;font-size:15px;outline:none;transition:.2s}
+.fld input::placeholder{color:rgba(255,255,255,.65)}
+.fld input:focus{background:rgba(255,255,255,.24);border-color:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.15)}
+.btn{border:0;cursor:pointer;font:inherit;font-weight:700;border-radius:14px;padding:14px 20px;color:#fff;background:linear-gradient(135deg,var(--red),var(--red2));box-shadow:0 10px 22px rgba(198,40,57,.35);transition:.2s}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:scale(.98)}.btn:disabled{opacity:.6;cursor:wait}
+.lc .btn{width:100%;margin-top:6px}
+.err{color:#ffd3d7;font-size:13px;min-height:18px;margin-top:12px}
+@keyframes rise{from{opacity:0;transform:translateY(30px) scale(.96)}}
+/* welcome overlay */
+#wel{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:var(--navy);animation:welOut .7s 1.9s ease forwards}
+#wel .ring{position:absolute;width:20px;height:20px;border-radius:50%;background:var(--red);animation:grow 1.6s ease-in forwards;opacity:.9}
+#wel .chk{position:relative;width:96px;height:96px;border-radius:50%;background:#fff;display:grid;place-items:center;animation:pop .6s .2s cubic-bezier(.3,1.6,.5,1) both}
+#wel .chk svg{width:48px;stroke:var(--ok);stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:50;stroke-dashoffset:50;animation:dash .5s .7s forwards}
+@keyframes grow{to{transform:scale(160);opacity:0}}
+@keyframes pop{from{transform:scale(0)}}
+@keyframes dash{to{stroke-dashoffset:0}}
+@keyframes welOut{to{opacity:0;visibility:hidden}}
+/* app */
+#app{min-height:100%;background:var(--cream);display:flex}
+.side{width:250px;background:linear-gradient(180deg,var(--navy),var(--navy2));color:#fff;padding:24px 16px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.brand{display:flex;gap:10px;align-items:center;margin-bottom:28px;font-weight:800;font-size:14px;line-height:1.25}
+.brand img,.brand .logo-fb{width:42px;height:42px}
+.brand small{display:block;font-weight:500;opacity:.7;font-size:11px}
+.nav button{display:flex;gap:12px;align-items:center;width:100%;border:0;background:none;color:rgba(255,255,255,.75);font:inherit;font-weight:600;font-size:14px;padding:13px 14px;border-radius:14px;cursor:pointer;margin-bottom:6px;transition:.2s}
+.nav button:hover{background:rgba(255,255,255,.08)}
+.nav button.on{background:rgba(255,255,255,.15);color:#fff;box-shadow:inset 3px 0 0 var(--red2)}
+.nav svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.out{margin-top:auto}
+main{flex:1;padding:28px;min-width:0;max-width:1100px}
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:var(--r);padding:30px;position:relative;overflow:hidden;margin-bottom:22px}
+.hero:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(var(--red),transparent 70%);opacity:.7}
+.hero h2{font-size:clamp(20px,4vw,28px);font-weight:800;min-height:1.3em;position:relative;z-index:1}
+.caret{display:inline-block;width:3px;height:1em;background:var(--red2);margin-left:3px;vertical-align:-3px;animation:bl .8s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.hero p{opacity:.8;margin-top:8px;font-size:14px;position:relative;z-index:1}
+.rv{opacity:0;transform:translateY(18px);animation:rv .7s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rv{to{opacity:1;transform:none}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 4px 14px rgba(16,38,74,.05)}
+.stat b{display:block;font-size:32px;font-weight:800;color:var(--navy)}
+.stat span{font-size:13px;color:var(--mut)}
+.stat.r b{color:var(--red)}
+h3{font-size:17px;font-weight:800;margin-bottom:14px;color:var(--navy)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid .full{grid-column:1/-1}
+label{display:block;font-size:12.5px;font-weight:700;color:var(--mut);margin-bottom:6px}
+.in{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;font-size:14px;background:#fbfaf8;color:var(--ink);outline:none;transition:.2s}
+.in:focus{border-color:var(--navy2);box-shadow:0 0 0 3px rgba(27,58,107,.12);background:#fff}
+.gen{background:linear-gradient(135deg,#fdf1f2,#f2f6fc);border:1px dashed #d9b3b8;border-radius:16px;padding:16px}
+.gen .no{font-size:clamp(17px,4vw,22px);font-weight:800;color:var(--red);word-break:break-all}
+.drop{border:2px dashed #c9cfdb;border-radius:14px;padding:18px;text-align:center;color:var(--mut);font-size:13px;cursor:pointer;transition:.2s}
+.drop:hover{border-color:var(--navy2);background:#f4f7fc}
+.sec{background:#eef1f7;color:var(--navy);box-shadow:none}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;color:var(--mut);font-size:12px;padding:10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:12px 10px;border-bottom:1px solid #f0ede7;vertical-align:top}
+.pv{border:0;background:#eef1f7;color:var(--navy);font:inherit;font-weight:700;font-size:12px;padding:7px 12px;border-radius:10px;cursor:pointer}
+.empty{text-align:center;color:var(--mut);padding:26px;font-size:14px}
+.modal{position:fixed;inset:0;z-index:40;background:rgba(10,20,40,.6);backdrop-filter:blur(6px);display:grid;place-items:center;padding:14px}
+.mb{background:#fff;border-radius:20px;width:100%;max-width:900px;height:88vh;display:flex;flex-direction:column;overflow:hidden}
+.mh{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;font-weight:700}
+.mh button{border:0;background:#eef1f7;border-radius:10px;padding:8px 12px;cursor:pointer;font:inherit;font-weight:700}
+.mb iframe{flex:1;border:0;width:100%}
+#toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:14px;font-size:14px;font-weight:600;opacity:0;transition:.3s;z-index:60;pointer-events:none;max-width:90vw}
+#toast.show{opacity:1;transform:translateX(-50%)}
+#toast.bad{background:var(--red)}
+.tab{display:none}
+@media(max-width:780px){
+ #app{flex-direction:column}
+ .side{position:fixed;bottom:0;left:0;right:0;top:auto;width:auto;height:auto;flex-direction:row;padding:8px 10px calc(8px + env(safe-area-inset-bottom));z-index:30;border-radius:22px 22px 0 0}
+ .brand,.out span{display:none}
+ .nav{display:flex;flex:1;gap:4px}.nav button{flex-direction:column;gap:3px;font-size:11px;padding:8px 4px;margin:0;justify-content:center;text-align:center}
+ .out{margin:0}.out button{flex-direction:column;font-size:11px;padding:8px 10px}
+ main{padding:16px 14px 110px}
+ .grid{grid-template-columns:1fr}
+ .hero{padding:22px}
+}
+</style>
+</head>
+<body>
+<div class="bg"><i></i><i></i><i></i></div>
+
+<section id="login">
+ <form class="glass lc" id="lf" autocomplete="off">
+  <img class="lg" src="assets/logo-pgri.png" alt="PGRI">
+  <h1>Arsip Surat PGRI</h1>
+  <p>Kecamatan Teweh Selatan</p>
+  <div class="fld"><input id="u" placeholder="Username" autocomplete="username" required></div>
+  <div class="fld"><input id="p" type="password" placeholder="Password" autocomplete="current-password" required></div>
+  <button class="btn" id="lb">Masuk</button>
+  <div class="err" id="le"></div>
+ </form>
+</section>
+
+<div id="wel" class="hide"><div class="ring"></div><div class="chk"><svg viewBox="0 0 48 48"><path d="M12 25l8 8 16-18"/></svg></div></div>
+
+<div id="app" class="hide">
+ <aside class="side">
+  <div class="brand"><img class="lg" src="assets/logo-pgri.png" alt=""><div>PGRI Tesel<small>Arsip Surat</small></div></div>
+  <nav class="nav" id="nav">
+   <button data-t="home" class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/></svg>Beranda</button>
+   <button data-t="in"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H4zM4 16l4 4h8l4-4M9 10l3 3 3-3M12 6v7"/></svg>Surat Masuk</button>
+   <button data-t="out"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>Surat Keluar</button>
+  </nav>
+  <div class="out nav"><button id="lo"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg><span>Keluar</span></button></div>
+ </aside>
+ <main>
+  <section class="tab" id="t-home">
+   <div class="hero"><h2 id="tw"></h2><p class="rv" style="animation-delay:2.2s">Kelola arsip surat masuk dan surat keluar PGRI Kecamatan Teweh Selatan.</p></div>
+   <div class="stats">
+    <div class="card stat rv" style="animation-delay:.3s"><b id="sIn">0</b><span>Surat Masuk</span></div>
+    <div class="card stat r rv" style="animation-delay:.45s"><b id="sOut">0</b><span>Surat Keluar</span></div>
+    <div class="card stat rv" style="animation-delay:.6s"><b id="sYr">0</b><span>Surat Keluar Tahun Ini</span></div>
+   </div>
+   <div class="card rv" style="animation-delay:.75s"><h3>Surat Terbaru</h3><div class="tw"><table><thead><tr><th>Jenis</th><th>Nomor</th><th>Perihal</th></tr></thead><tbody id="recent"></tbody></table></div></div>
+  </section>
+
+  <section class="tab" id="t-in">
+   <div class="card" style="margin-bottom:18px"><h3>Input Surat Masuk</h3>
+    <form class="grid" id="fi">
+     <div><label>Nomor Surat</label><input class="in" id="iNo" required></div>
+     <div><label>Tanggal Surat</label><input class="in" type="date" id="iTgl" required></div>
+     <div class="full"><label>Asal Surat</label><input class="in" id="iAsal" required></div>
+     <div class="full"><label>Perihal</label><input class="in" id="iPer" required></div>
+     <div class="full"><label>Berkas (PDF/Gambar) — tersimpan ke Google Drive</label><label class="drop" for="iF" id="iFn">Ketuk untuk memilih berkas</label><input type="file" id="iF" accept=".pdf,image/*" class="hide" required></div>
+     <div class="full"><button class="btn" id="iB">Simpan & Unggah</button></div>
+    </form>
+   </div>
+   <div class="card"><h3>Daftar Surat Masuk</h3><div class="tw"><table><thead><tr><th>Tgl</th><th>Nomor</th><th>Asal</th><th>Perihal</th><th></th></tr></thead><tbody id="lIn"></tbody></table></div></div>
+  </section>
+
+  <section class="tab" id="t-out">
+   <div class="card" style="margin-bottom:18px"><h3>Buat Surat Keluar</h3>
+    <form class="grid" id="fo">
+     <div><label>Jenis Surat</label><select class="in" id="oJ"></select></div>
+     <div><label>Bulan</label><select class="in" id="oB"></select></div>
+     <div><label>Tahun</label><select class="in" id="oY"></select></div>
+     <div><label>Tanggal Surat</label><input class="in" type="date" id="oTgl" required></div>
+     <div class="full gen"><label>Nomor Surat (otomatis)</label><div class="no" id="oNo">…</div></div>
+     <div class="full"><label>Tujuan Surat</label><input class="in" id="oTuj" required></div>
+     <div class="full"><label>Tentang / Perihal</label><input class="in" id="oPer" required></div>
+     <div class="full"><label>Berkas surat keluar (PDF/Gambar) — tersimpan ke Google Drive</label><label class="drop" for="oF" id="oFn">Ketuk untuk memilih berkas</label><input type="file" id="oF" accept=".pdf,image/*" class="hide"></div>
+     <div class="full"><button class="btn" id="oBt">Simpan Surat Keluar</button></div>
+    </form>
+   </div>
+   <div class="card"><h3>Daftar Surat Keluar</h3><div class="tw"><table><thead><tr><th>Tgl</th><th>Nomor</th><th>Tujuan</th><th>Perihal</th><th></th></tr></thead><tbody id="lOut"></tbody></table></div></div>
+  </section>
+ </main>
+</div>
+
+<div class="modal hide" id="md"><div class="mb"><div class="mh"><span id="mt"></span><button id="mc">Tutup</button></div><iframe id="mf" allow="autoplay"></iframe></div></div>
+<div id="toast"></div>
+
+<script>
+const API="https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnQCgvIhuZAtFoez2uI7KBxLMEVQPkmi5p2qCL2etvhn9UGjcORuL_2JN7SEyQ1P-bIkPDU4ULtAp62gl4S73shGRqshITEorC2-kwesMoD1ARSkDQ1UtDYhzmkaPE8l_W8VbUXxshI3OjPVkS0EXD_6og9F2nluyXLVzBemzkmMSljJq9xPmq8HNHqCVPTAOyC_aGoIFoIjz9QoNh8PlEFnvYJcvv0OtPzkbWyMTzVCTuAmgFV3V8x-yT4A3jfW7f2UoR73tt7bKiME00irf2BA_2qbhg&lib=MLJQwjpCnjBHIVgFs1Iqpe_gCaRpyLrzG";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const ROM=["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"];
+const BLN=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+const JENIS=[["UND","Undangan"],["ST","Surat Tugas"],["SK","Surat Keputusan"],["PERM","Permohonan"],["PEM","Pemberitahuan"],["KET","Surat Keterangan"],["LAP","Laporan"]];
+let DATA={masuk:[],keluar:[]};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const logoFb='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#c62839"/><text x="50" y="60" font-size="26" font-weight="800" text-anchor="middle" fill="#fff" font-family="sans-serif">PGRI</text></svg>');
+$$("img.lg").forEach(i=>i.onerror=()=>{i.onerror=null;i.src=logoFb});
+
+function toast(m,bad){const t=$("#toast");t.textContent=m;t.className="show"+(bad?" bad":"");clearTimeout(t._h);t._h=setTimeout(()=>t.className="",3200)}
+async function api(action,d={}){
+  if(API.startsWith("GANTI"))throw new Error("URL Web App belum diatur di index.html");
+  const r=await fetch(API,{method:"POST",body:JSON.stringify({action,token:sessionStorage.getItem("tk"),...d})});
+  const j=await r.json(); if(j.auth){logout(true)} if(!j.ok)throw new Error(j.msg||"Terjadi kesalahan"); return j;
+}
+const readFile=f=>new Promise((res,rej)=>{if(!f)return res(null);if(f.size>8*1048576)return rej(new Error("Ukuran berkas maksimal 8 MB"));const r=new FileReader();r.onload=()=>res({name:f.name,type:f.type||"application/octet-stream",data:r.result.split(",")[1]});r.onerror=()=>rej(new Error("Gagal membaca berkas"));r.readAsDataURL(f)});
+
+/* login */
+$("#lf").onsubmit=async e=>{
+  e.preventDefault();$("#le").textContent="";$("#lb").disabled=true;$("#lb").textContent="Memeriksa…";
+  try{const j=await api("login",{u:$("#u").value.trim(),p:$("#p").value});
+    sessionStorage.setItem("tk",j.token);enter(true);
+  }catch(x){$("#le").textContent=x.message}
+  $("#lb").disabled=false;$("#lb").textContent="Masuk";
+};
+function enter(anim){
+  $("#login").classList.add("hide");
+  if(anim){$("#wel").classList.remove("hide");setTimeout(()=>$("#wel").classList.add("hide"),2700)}
+  $("#app").classList.remove("hide");show("home");typeHero(anim?1500:0);load();
+}
+function logout(){sessionStorage.removeItem("tk");$("#app").classList.add("hide");$("#login").classList.remove("hide");$("#p").value=""}
+$("#lo").onclick=()=>logout();
+
+/* nav & animasi tulisan */
+function show(t){$$(".tab").forEach(s=>s.style.display="none");$("#t-"+t).style.display="block";$$("#nav button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));scrollTo(0,0);if(t==="out")genNo()}
+$$("#nav button").forEach(b=>b.onclick=()=>show(b.dataset.t));
+let twT;
+function typeHero(delay){
+  const txt="Selamat datang di Arsip Surat PGRI Teweh Selatan",el=$("#tw");clearTimeout(twT);el.innerHTML='<span class="caret"></span>';
+  let i=0;const step=()=>{el.innerHTML=esc(txt.slice(0,++i))+'<span class="caret"></span>';if(i<txt.length)twT=setTimeout(step,45)};
+  twT=setTimeout(step,delay);
+}
+
+/* data */
+async function load(){try{DATA=await api("list");render()}catch(e){toast(e.message,1)}}
+function fileBtn(r,t){return r.FileId?`<button class="pv" data-id="${esc(r.FileId)}" data-t="${esc(t)}">Preview</button>`:"—"}
+function render(){
+  const y=String(new Date().getFullYear());
+  $("#sIn").textContent=DATA.masuk.length;$("#sOut").textContent=DATA.keluar.length;
+  $("#sYr").textContent=DATA.keluar.filter(r=>String(r["No Surat"]).endsWith("/"+y)).length;
+  const rec=[...DATA.masuk.slice(0,3).map(r=>["Masuk",r["No Surat"],r["Perihal"]]),...DATA.keluar.slice(0,3).map(r=>["Keluar",r["No Surat"],r["Perihal"]])];
+  $("#recent").innerHTML=rec.length?rec.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join(""):'<tr><td colspan="3" class="empty">Belum ada surat</td></tr>';
+  $("#lIn").innerHTML=DATA.masuk.length?DATA.masuk.map(r=>`<tr><td>${esc(r["Tgl Surat"])}</td><td>${esc(r["No Surat"])}</td><td>${esc(r["Asal Surat"])}</td><td>${esc(r["Perihal"])}</td><td>${fileBtn(r,r["No Surat"])}</td></tr>`).join(""):'<tr><td colspan="5" class="empty">Belum ada surat masuk</td></tr>';
+  $("#lOut").innerHTML=DATA.keluar.length?DATA.keluar.map(r=>`<tr><td>${esc(r["Tgl Surat"])}</td><td>${esc(r["No Surat"])}</td><td>${esc(r["Tujuan"])}</td><td>${esc(r["Perihal"])}</td><td>${fileBtn(r,r["No Surat"])}</td></tr>`).join(""):'<tr><td colspan="5" class="empty">Belum ada surat keluar</td></tr>';
+}
+document.addEventListener("click",e=>{const b=e.target.closest(".pv");if(!b)return;
+  $("#mt").textContent=b.dataset.t;$("#mf").src="https://drive.google.com/file/d/"+b.dataset.id+"/preview";$("#md").classList.remove("hide")});
+$("#mc").onclick=()=>{$("#md").classList.add("hide");$("#mf").src="about:blank"};
+$("#md").onclick=e=>{if(e.target.id==="md")$("#mc").click()};
+["iF","oF"].forEach(id=>$("#"+id).onchange=e=>{$("#"+id[0]+"Fn").textContent=e.target.files[0]?.name||"Ketuk untuk memilih berkas"});
+
+/* surat masuk */
+$("#fi").onsubmit=async e=>{e.preventDefault();$("#iB").disabled=true;
+  try{const file=await readFile($("#iF").files[0]);
+    await api("saveIn",{no:$("#iNo").value.trim(),tgl:$("#iTgl").value,asal:$("#iAsal").value.trim(),perihal:$("#iPer").value.trim(),file});
+    toast("Surat masuk tersimpan");e.target.reset();$("#iFn").textContent="Ketuk untuk memilih berkas";load();
+  }catch(x){toast(x.message,1)}$("#iB").disabled=false};
+
+/* surat keluar */
+const now=new Date();
+$("#oJ").innerHTML=JENIS.map(j=>`<option value="${j[0]}">${j[1]} (${j[0]})</option>`).join("");
+$("#oB").innerHTML=BLN.map((b,i)=>`<option value="${i}">${b}</option>`).join("");
+$("#oB").value=now.getMonth();
+$("#oY").innerHTML=[-2,-1,0,1].map(d=>{const y=now.getFullYear()+d;return `<option ${d==0?"selected":""}>${y}</option>`}).join("");
+let curNo="";
+async function genNo(){
+  $("#oNo").textContent="Menghitung…";curNo="";
+  try{const j=await api("nextNo",{jenis:$("#oJ").value,tahun:$("#oY").value});
+    curNo=`${String(j.seq).padStart(2,"0")}/${$("#oJ").value}/PGRI-TESEL/${ROM[$("#oB").value]}/${$("#oY").value}`;$("#oNo").textContent=curNo;
+  }catch(x){$("#oNo").textContent="—";toast(x.message,1)}
+}
+["oJ","oB","oY"].forEach(id=>$("#"+id).onchange=genNo);
+$("#fo").onsubmit=async e=>{e.preventDefault();if(!curNo)return toast("Nomor surat belum siap",1);$("#oBt").disabled=true;
+  try{const file=await readFile($("#oF").files[0]);
+    await api("saveOut",{no:curNo,jenis:$("#oJ").value,tgl:$("#oTgl").value,tujuan:$("#oTuj").value.trim(),perihal:$("#oPer").value.trim(),file});
+    toast("Surat keluar tersimpan: "+curNo);["oTgl","oTuj","oPer","oF"].forEach(i=>$("#"+i).value="");$("#oFn").textContent="Ketuk untuk memilih berkas";await load();genNo();
+  }catch(x){toast(x.message,1)}$("#oBt").disabled=false};
+
+if(sessionStorage.getItem("tk"))enter(false);
+</script>
+</body>
+</html>
